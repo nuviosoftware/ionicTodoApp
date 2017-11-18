@@ -1,0 +1,9 @@
+<ion-content padding>
+    <form #taskForm="ngForm">
+        <ion-item>
+            <ion-input name="taskName" minlength="3" placeholder="Task name" [(ngModel)]="taskName"></ion-input>
+        </ion-item>
+        <button [disabled]="!taskForm.form.valid" type="submit" ion-button color="primary" (click)="confirm()">Confirm</button>
+        <button ion-button color="danger" (click)="cancel()">Cancel</button>
+    </form>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      My Todo List
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)="add()">Add task</button>
+  <button ion-button (click)="clean()">Clean list</button>
+
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+        <ion-label>{{ item.key }}</ion-label>
+      <ion-checkbox [(ngModel)]="item.value"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>
